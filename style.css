@@ -1,0 +1,61 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('iamge.jpg') no-repeat center center/cover; /* 배경 이미지 */
+    color: white;
+    text-align: center;
+}
+
+/* 이건 이제 알아라 좀 */
+.video-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    max-width: 800px;
+}
+
+
+video {
+    width: 150%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    ;
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.3); 
+    transition: box-shadow 0.5s ease-in-out; 
+}
+video:hover {
+    box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.5);
+}
+
+
+/* 비디오 위 글 배치 */
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    animation: fadeOut 2s ease-in-out 5s forwards; /* ✅ 5초 후 페이드 아웃 */
+}
+
+/* 페이드 아웃 해줌 기억하자! */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
